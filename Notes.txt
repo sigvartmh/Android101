@@ -1,0 +1,107 @@
+New project
+
+Application Name: Hello Again
+Module name: App
+Package name: com.<yourcompanywebsite>.helloagain.app
+Project Location: Doesn't matter
+Minimum require SDK:
+Target SDK:
+Compile with:
+Language Level: (ovride interface)
+Theme: <Holo light with dark action bar>
+Create customm launcher icon
+Create activity
+
+Mark project as a library
+
+
+Different types of activity
+Blank Activity
+
+----
+Activity Main: MainActivity: Java class( code behind the application)
+Layout Name: (xml name) [no need to be an XML guru]
+
+Previous
+Folder structure:
+.idea(project spesfici config used by Android Studio)
+App (Project module Application is here);
+	- Build (compiled classes, auto generated files, other resources)
+	- Libs (Library imported for your project)<Will not be focusing on this>
+	- src
+		- main
+			- <package name> -> 
+				- MainActivity.Java (Code for your application)
+		- res (UX stuff)
+			- drawable(img diff res)
+		- layout (Layouts for your application[we will get back to that])
+			- activty_main.xml
+		- menu 
+			- menu_main.xml
+		- values
+			- Stores standards(text/color/animationstyle etc...)
+		- AndroidManifest.xml (Phone/user resourcess required by the App)
+Gradle(Build files/Makefile etc.)
+
+Now
+Folder structure:
+.idea(project spesfici config used by Android Studio)
+App (Project module Application is here);
+	- Build (compiled classes, auto generated files, other resources)
+	- Libs (Library imported for your project)<Will not be focusing on this>
+	- Java
+			- <package name> -> 
+				- MainActivity.Java (Code for your application)
+	- src
+		
+		- res (UX stuff)
+			- drawable(img diff res)
+		- layout (Layouts for your application[we will get back to that])
+			- activty_main.xml
+		- menu 
+			- menu_main.xml
+		- values
+			- Stores standards(text/color/animationstyle etc...)
+		- AndroidManifest.xml (Phone/user resourcess required by the App)
+Gradle(Build files/Makefile etc.)
+
+
+Terminologi:
+
+SP for fonts (scale independent pixebls)
+DP (density independent pixel)
+
+!!! viktig
+android:id="@+id/button" lar oss interaktere med knappen
+"@+id" adding ID to master file R.java automatisk generet
+andorid:layout_below="@+id/textView"
+
+final TextView firstTextView = (TextView) findViewById(R.id.textView)
+Button firstButton = (Button) findViewById(R.id.firstButton)
+
+firstButton.setOnClickListner(new View.OnClickListner(){ //inner class
+	public void on click(View view){
+		firstTextView.setText("You Clicked")
+
+	}
+});
+
+bruker final fordi vi skal bruke det i en indre klasse.
+Automatisk impoterte android.widget.TextView; Hvis ikke importer dette
+
+onCreateOPtionsMenu(legger til ting i actionbaren)
+
+onOptionsItemSelected(MenuItem item) Her kan man definere hva som skjer hvis man trykker på action bar itemet
+
+R.java
+
+
+Best pratice:
+Store text in strings.xml
+
+
+---
+Extras
+Vis canary channel
+dev channel
+beta channel
